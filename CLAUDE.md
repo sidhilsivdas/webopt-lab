@@ -17,6 +17,14 @@ npm run preview   # serve the production build on :4173 (use this for realistic 
 Stack: Vite 8, React 19, TypeScript 7, Tailwind CSS v4 (`@tailwindcss/vite`, configured in
 `src/index.css`, no config file), `@tanstack/react-query`, `@tanstack/react-virtual`. Dark theme only.
 
+## Deploy
+
+- Repo: https://github.com/sidhilsivdas/webopt-lab (public, branch `main`)
+- Live: https://sidhilsivdas.github.io/webopt-lab/ (results page: `results.html`)
+- Every push to `main` deploys via `.github/workflows/deploy.yml` (`npm ci` → `npm run build` → GitHub Pages).
+- The site lives under a sub-path, so `vite.config.ts` uses `base: './'`, and **all internal links must be
+  relative** (`results.html`, `./#demo`, `./`). Never use links that start with `/`.
+
 ## Layout
 
 ```
