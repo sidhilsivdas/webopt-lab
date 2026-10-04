@@ -1,0 +1,606 @@
+{
+ "generatedAt": "2026-10-04T06:00:39.000Z",
+ "durationMs": 1999900,
+ "browser": "Chrome 154.0.8037.97",
+ "machine": "12th Gen Intel(R) Core(TM) i3-1215U, 8 GB RAM",
+ "stats": {
+  "total": 91,
+  "passed": 91,
+  "failed": 0,
+  "skipped": 0
+ },
+ "features": [
+  {
+   "feature": "Shows a loading state before data arrives",
+   "naive": {
+    "status": "passed"
+   },
+   "query": {
+    "status": "passed"
+   },
+   "virtual": {
+    "status": "passed"
+   }
+  },
+  {
+   "feature": "Rows in memory after first load",
+   "naive": {
+    "status": "passed"
+   },
+   "query": {
+    "status": "passed"
+   },
+   "virtual": {
+    "status": "passed"
+   }
+  },
+  {
+   "feature": "Rows mounted in the DOM after first load",
+   "naive": {
+    "status": "passed"
+   },
+   "query": {
+    "status": "passed"
+   },
+   "virtual": {
+    "status": "passed"
+   }
+  },
+  {
+   "feature": "Row shows id, name, email, status and score",
+   "naive": {
+    "status": "passed"
+   },
+   "query": {
+    "status": "passed"
+   },
+   "virtual": {
+    "status": "passed"
+   }
+  },
+  {
+   "feature": "Same data on every run (deterministic mock)",
+   "naive": {
+    "status": "passed"
+   },
+   "query": {
+    "status": "passed"
+   },
+   "virtual": {
+    "status": "passed"
+   }
+  },
+  {
+   "feature": "Fetches more rows when scrolled to the bottom",
+   "naive": {
+    "status": "passed"
+   },
+   "query": {
+    "status": "passed"
+   },
+   "virtual": {
+    "status": "passed"
+   }
+  },
+  {
+   "feature": "Loads every row when scrolled to the end",
+   "naive": {
+    "status": "passed"
+   },
+   "query": {
+    "status": "passed"
+   },
+   "virtual": {
+    "status": "passed"
+   }
+  },
+  {
+   "feature": "DOM size after scrolling 2,000 rows deep",
+   "naive": {
+    "status": "passed",
+    "value": "100,001 nodes"
+   },
+   "query": {
+    "status": "passed",
+    "value": "22,002 nodes"
+   },
+   "virtual": {
+    "status": "passed",
+    "value": "262 nodes"
+   }
+  },
+  {
+   "feature": "Clicking a row selects it and deselects the previous",
+   "naive": {
+    "status": "passed"
+   },
+   "query": {
+    "status": "passed"
+   },
+   "virtual": {
+    "status": "passed"
+   }
+  },
+  {
+   "feature": "Click → paint latency is measured",
+   "naive": {
+    "status": "passed",
+    "value": "238 ms"
+   },
+   "query": {
+    "status": "passed",
+    "value": "11 ms"
+   },
+   "virtual": {
+    "status": "passed",
+    "value": "5 ms"
+   }
+  },
+  {
+   "feature": "Selection survives scrolling away and back",
+   "naive": {
+    "status": "passed"
+   },
+   "query": {
+    "status": "passed"
+   },
+   "virtual": {
+    "status": "passed"
+   }
+  },
+  {
+   "feature": "Idle metric sampling does not re-render the list (bug #1)",
+   "naive": {
+    "status": "passed"
+   },
+   "query": {
+    "status": "passed"
+   },
+   "virtual": {
+    "status": "passed"
+   }
+  },
+  {
+   "feature": "Stays smooth while idle after mount (bug #2)",
+   "naive": {
+    "status": "passed",
+    "value": "45 fps"
+   },
+   "query": {
+    "status": "passed",
+    "value": "60 fps"
+   },
+   "virtual": {
+    "status": "passed",
+    "value": "60 fps"
+   }
+  }
+ ],
+ "perf": [
+  {
+   "mode": "naive",
+   "total": 10000,
+   "status": "passed",
+   "dnf": false,
+   "mountMs": 5600,
+   "mountTbtMs": 2800,
+   "heapBeforeMB": 3,
+   "heapAfterMountMB": 90,
+   "heapAfterScrollMB": 139,
+   "domAfterMount": 100001,
+   "domAfterScroll": 100001,
+   "clickPaintMs": 251,
+   "scrollAvgFps": 33,
+   "scrollWorstFrameMs": 500,
+   "mountLongestTaskMs": 2200
+  },
+  {
+   "mode": "naive",
+   "total": 25000,
+   "status": "passed",
+   "dnf": false,
+   "mountMs": 16800,
+   "mountTbtMs": 10100,
+   "heapBeforeMB": 4,
+   "heapAfterMountMB": 221,
+   "heapAfterScrollMB": 342,
+   "domAfterMount": 250001,
+   "domAfterScroll": 250001,
+   "clickPaintMs": 925,
+   "scrollAvgFps": 9,
+   "scrollWorstFrameMs": 1000,
+   "mountLongestTaskMs": 6400
+  },
+  {
+   "mode": "query",
+   "total": 10000,
+   "status": "passed",
+   "dnf": false,
+   "mountMs": 713,
+   "mountTbtMs": 0,
+   "heapBeforeMB": 4,
+   "heapAfterMountMB": 6,
+   "heapAfterScrollMB": 15,
+   "domAfterMount": 2002,
+   "domAfterScroll": 8002,
+   "clickPaintMs": 24,
+   "scrollAvgFps": 58,
+   "scrollWorstFrameMs": 117,
+   "mountLongestTaskMs": 0
+  },
+  {
+   "mode": "query",
+   "total": 25000,
+   "status": "passed",
+   "dnf": false,
+   "mountMs": 512,
+   "mountTbtMs": 53,
+   "heapBeforeMB": 4,
+   "heapAfterMountMB": 6,
+   "heapAfterScrollMB": 15,
+   "domAfterMount": 2002,
+   "domAfterScroll": 8002,
+   "clickPaintMs": 27,
+   "scrollAvgFps": 59,
+   "scrollWorstFrameMs": 67,
+   "mountLongestTaskMs": 103
+  },
+  {
+   "mode": "query",
+   "total": 50000,
+   "status": "passed",
+   "dnf": false,
+   "mountMs": 438,
+   "mountTbtMs": 21,
+   "heapBeforeMB": 4,
+   "heapAfterMountMB": 6,
+   "heapAfterScrollMB": 15,
+   "domAfterMount": 2002,
+   "domAfterScroll": 8002,
+   "clickPaintMs": 24,
+   "scrollAvgFps": 59,
+   "scrollWorstFrameMs": 50,
+   "mountLongestTaskMs": 71
+  },
+  {
+   "mode": "query",
+   "total": 100000,
+   "status": "passed",
+   "dnf": false,
+   "mountMs": 623,
+   "mountTbtMs": 91,
+   "heapBeforeMB": 4,
+   "heapAfterMountMB": 6,
+   "heapAfterScrollMB": 15,
+   "domAfterMount": 2002,
+   "domAfterScroll": 8002,
+   "clickPaintMs": 25,
+   "scrollAvgFps": 57,
+   "scrollWorstFrameMs": 115,
+   "mountLongestTaskMs": 131
+  },
+  {
+   "mode": "virtual",
+   "total": 10000,
+   "status": "passed",
+   "dnf": false,
+   "mountMs": 394,
+   "mountTbtMs": 0,
+   "heapBeforeMB": 4,
+   "heapAfterMountMB": 4,
+   "heapAfterScrollMB": 6,
+   "domAfterMount": 182,
+   "domAfterScroll": 272,
+   "clickPaintMs": 7,
+   "scrollAvgFps": 60,
+   "scrollWorstFrameMs": 33,
+   "mountLongestTaskMs": 0
+  },
+  {
+   "mode": "virtual",
+   "total": 25000,
+   "status": "passed",
+   "dnf": false,
+   "mountMs": 372,
+   "mountTbtMs": 0,
+   "heapBeforeMB": 4,
+   "heapAfterMountMB": 5,
+   "heapAfterScrollMB": 6,
+   "domAfterMount": 182,
+   "domAfterScroll": 272,
+   "clickPaintMs": 11,
+   "scrollAvgFps": 60,
+   "scrollWorstFrameMs": 18,
+   "mountLongestTaskMs": 0
+  },
+  {
+   "mode": "virtual",
+   "total": 50000,
+   "status": "passed",
+   "dnf": false,
+   "mountMs": 337,
+   "mountTbtMs": 0,
+   "heapBeforeMB": 4,
+   "heapAfterMountMB": 4,
+   "heapAfterScrollMB": 6,
+   "domAfterMount": 182,
+   "domAfterScroll": 272,
+   "clickPaintMs": 9,
+   "scrollAvgFps": 60,
+   "scrollWorstFrameMs": 33,
+   "mountLongestTaskMs": 0
+  },
+  {
+   "mode": "virtual",
+   "total": 100000,
+   "status": "passed",
+   "dnf": false,
+   "mountMs": 464,
+   "mountTbtMs": 0,
+   "heapBeforeMB": 4,
+   "heapAfterMountMB": 5,
+   "heapAfterScrollMB": 6,
+   "domAfterMount": 182,
+   "domAfterScroll": 272,
+   "clickPaintMs": 13,
+   "scrollAvgFps": 60,
+   "scrollWorstFrameMs": 18,
+   "mountLongestTaskMs": 0
+  }
+ ],
+ "checks": [
+  {
+   "group": "Demo controls",
+   "title": "defaults: naive tab selected, 10,000 rows",
+   "status": "passed",
+   "durationMs": null
+  },
+  {
+   "group": "Demo controls",
+   "title": "row-count options are 10k, 25k, 50k, 100k",
+   "status": "passed",
+   "durationMs": null
+  },
+  {
+   "group": "Demo controls",
+   "title": "naive tab does not mount anything until the button is clicked",
+   "status": "passed",
+   "durationMs": null
+  },
+  {
+   "group": "Demo controls",
+   "title": "mount gate warning for 10,000 rows",
+   "status": "passed",
+   "durationMs": null
+  },
+  {
+   "group": "Demo controls",
+   "title": "mount gate warning for 25,000 rows",
+   "status": "passed",
+   "durationMs": null
+  },
+  {
+   "group": "Demo controls",
+   "title": "mount gate warning for 50,000 rows",
+   "status": "passed",
+   "durationMs": null
+  },
+  {
+   "group": "Demo controls",
+   "title": "mount gate warning for 100,000 rows",
+   "status": "passed",
+   "durationMs": null
+  },
+  {
+   "group": "Demo controls",
+   "title": "changing the row count re-arms the mount gate",
+   "status": "passed",
+   "durationMs": null
+  },
+  {
+   "group": "Demo controls",
+   "title": "restart run re-arms the naive gate and resets metrics",
+   "status": "passed",
+   "durationMs": null
+  },
+  {
+   "group": "Demo controls",
+   "title": "restart run in TanStack Query tab refetches from a cold cache",
+   "status": "passed",
+   "durationMs": null
+  },
+  {
+   "group": "Demo controls",
+   "title": "switching tabs unmounts the previous list",
+   "status": "passed",
+   "durationMs": null
+  },
+  {
+   "group": "Demo controls",
+   "title": "switching back to the naive tab requires mounting again",
+   "status": "passed",
+   "durationMs": null
+  },
+  {
+   "group": "Demo controls",
+   "title": "code notes match the naive tab",
+   "status": "passed",
+   "durationMs": null
+  },
+  {
+   "group": "Demo controls",
+   "title": "code notes match the query tab",
+   "status": "passed",
+   "durationMs": null
+  },
+  {
+   "group": "Demo controls",
+   "title": "code notes match the virtual tab",
+   "status": "passed",
+   "durationMs": null
+  },
+  {
+   "group": "Demo controls",
+   "title": "auto-scroll button toggles to Stop and can be stopped manually",
+   "status": "passed",
+   "durationMs": null
+  },
+  {
+   "group": "Demo controls",
+   "title": "auto-scroll stops by itself after ~8 seconds",
+   "status": "passed",
+   "durationMs": null
+  },
+  {
+   "group": "Demo controls",
+   "title": "auto-scroll stops by itself at the end of a short list",
+   "status": "passed",
+   "durationMs": null
+  },
+  {
+   "group": "Demo controls",
+   "title": "auto-scroll waits for the next page instead of stopping early (TanStack Query tab)",
+   "status": "passed",
+   "durationMs": null
+  },
+  {
+   "group": "Demo controls",
+   "title": "auto-scroll is cancelled when switching tabs",
+   "status": "passed",
+   "durationMs": null
+  },
+  {
+   "group": "Metrics panel",
+   "title": "all metric tiles and stats are present",
+   "status": "passed",
+   "durationMs": null
+  },
+  {
+   "group": "Metrics panel",
+   "title": "metrics start sampling and report ~60 fps when idle",
+   "status": "passed",
+   "durationMs": null
+  },
+  {
+   "group": "Metrics panel",
+   "title": "click → paint shows a placeholder until a row is clicked",
+   "status": "passed",
+   "durationMs": null
+  },
+  {
+   "group": "Metrics panel",
+   "title": "sparkline hover shows a tooltip with the sample value",
+   "status": "passed",
+   "durationMs": null
+  },
+  {
+   "group": "Metrics panel",
+   "title": "no Chromium-only notice in Chrome",
+   "status": "passed",
+   "durationMs": null
+  },
+  {
+   "group": "Home & header",
+   "title": "page loads with no console errors or page errors",
+   "status": "passed",
+   "durationMs": null
+  },
+  {
+   "group": "Home & header",
+   "title": "page title is set",
+   "status": "passed",
+   "durationMs": null
+  },
+  {
+   "group": "Home & header",
+   "title": "navbar FPS badge shows a live frame rate",
+   "status": "passed",
+   "durationMs": null
+  },
+  {
+   "group": "Home & header",
+   "title": "navbar gets a solid background after scrolling",
+   "status": "passed",
+   "durationMs": null
+  },
+  {
+   "group": "Home & header",
+   "title": "navbar \"Tricks\" link scrolls to #tricks",
+   "status": "passed",
+   "durationMs": null
+  },
+  {
+   "group": "Home & header",
+   "title": "navbar \"Live demo\" link scrolls to #demo",
+   "status": "passed",
+   "durationMs": null
+  },
+  {
+   "group": "Home & header",
+   "title": "hero \"Start the demo\" button scrolls to #demo",
+   "status": "passed",
+   "durationMs": null
+  },
+  {
+   "group": "Home & header",
+   "title": "hero \"Browse tricks\" button scrolls to #tricks",
+   "status": "passed",
+   "durationMs": null
+  },
+  {
+   "group": "Home & header",
+   "title": "logo link returns to the top",
+   "status": "passed",
+   "durationMs": null
+  },
+  {
+   "group": "Home & header",
+   "title": "six trick cards: one live, five coming soon",
+   "status": "passed",
+   "durationMs": null
+  },
+  {
+   "group": "Home & header",
+   "title": "live trick card links to the demo",
+   "status": "passed",
+   "durationMs": null
+  },
+  {
+   "group": "Home & header",
+   "title": "coming-soon cards are disabled and go nowhere",
+   "status": "passed",
+   "durationMs": null
+  },
+  {
+   "group": "Home & header",
+   "title": "trick card spotlight follows the pointer",
+   "status": "passed",
+   "durationMs": null
+  },
+  {
+   "group": "Home & header",
+   "title": "footer states that no server is involved",
+   "status": "passed",
+   "durationMs": null
+  },
+  {
+   "group": "Responsive (mobile 390×844)",
+   "title": "no horizontal page scroll",
+   "status": "passed",
+   "durationMs": null
+  },
+  {
+   "group": "Responsive (mobile 390×844)",
+   "title": "navbar text links hide, FPS badge stays",
+   "status": "passed",
+   "durationMs": null
+  },
+  {
+   "group": "Responsive (mobile 390×844)",
+   "title": "demo tabs, list and metrics are all usable",
+   "status": "passed",
+   "durationMs": null
+  }
+ ],
+ "failures": []
+}

@@ -1,0 +1,40 @@
+@import 'tailwindcss';
+
+@theme {
+  --animate-gradient: gradient 6s linear infinite;
+  @keyframes gradient {
+    to {
+      background-position: 200% center;
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-slate-950 font-sans text-slate-200 antialiased;
+}
+
+.hero-grid {
+  background-image:
+    linear-gradient(to right, rgb(148 163 184 / 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(148 163 184 / 0.07) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse at 50% 0%, black 30%, transparent 75%);
+}
+
+.hero-spot {
+  background: radial-gradient(500px circle at var(--mx, 50%) var(--my, 20%), rgb(56 189 248 / 0.12), transparent 70%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-gradient {
+    animation: none;
+  }
+}
